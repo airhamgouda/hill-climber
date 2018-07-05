@@ -14,15 +14,24 @@ if (hikingKEY === '') {
 let lat = 0;
 let lon = 0;
 let radius = 10;
-let maxResults = 100
-let trailsList = []
+let maxResults = 100;
+let trailsList = [];
 
 // Snippets
 class Trails extends Component {
     render() {
         return (
             < div className="Trails" >
-                Test
+                <p>1: {trailsList[0].name}</p>
+                <p>2: {trailsList[1].name}</p>
+                <p>3: {trailsList[2].name}</p>
+                <p>4: {trailsList[3].name}</p>
+                <p>5: {trailsList[4].name}</p>
+                <p>6: {trailsList[5].name}</p>
+                <p>7: {trailsList[6].name}</p>
+                <p>8: {trailsList[7].name}</p>
+                <p>9: {trailsList[8].name}</p>
+                <p>10: {trailsList[9].name}</p>
             </div >
         )
     }
@@ -48,10 +57,6 @@ function fetchHikes() {
         .then(function (list) {
             trailsList = list;
             console.log(trailsList)
-            for (let i = 0; i < array.length; i++) {
-                const element = array[i];
-
-            }
             ReactDOM.render(<Trails />, document.getElementById('trails'));
         });
 }
