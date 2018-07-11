@@ -1,6 +1,8 @@
 // Imports
+
 let MongoClient = require('mongodb').MongoClient;
-let assert = require('assert');
+
+
 // Hex encription
 function sha1(msg) {
     function rotl(n, s) { return n << s | n >>> 32 - s; };
@@ -25,6 +27,7 @@ function sha1(msg) {
     return tohex(H0) + tohex(H1) + tohex(H2) + tohex(H3) + tohex(H4);
 }
 
+
 // mLab connection
 
 let cloud = true;
@@ -48,7 +51,7 @@ let url = 'mongodb://' + authenticate + mongodbHost + ':' + mongodbPort + '/' + 
 
 // Login functions
 
-export function createUsers(username, password) {
+function createUsers(username, password) {
 
 
     MongoClient.connect(url)
@@ -111,4 +114,6 @@ function deleteUsers(username) {
         .catch(function (err) { console.log(err) })
 }
 
+let test = 1
+export { test }
 

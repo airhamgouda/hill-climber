@@ -5,6 +5,10 @@ import './ManualSearch.css';
 import './Login.css';
 import ManualSearch from './ManualSearch'
 import Home from './Home'
+import { test } from './server.js'
+
+console.log(test);
+
 
 function newAccount() {
     ReactDOM.render(<NewUser />, document.getElementById('root'));
